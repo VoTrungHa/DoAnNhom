@@ -1,0 +1,45 @@
+﻿ Header
+ {
+     background:#ff0000;
+     
+     height:60px;
+     padding:0;
+     padding-top:0.5rem;
+     z-index:9999999;
+ }
+ h1
+ {
+     font-size:34px;
+     font-weight:500;
+     color:#ffffff;
+ }
+ #search
+ {
+     position:relative;
+     margin-top:0.5rem
+ }
+#search_item
+ {
+     position:absolute;
+     right:10px;
+     top:10px;
+     color:#ff0000;
+ }
+#nav_header
+{
+    position:relative;
+    padding:auto;
+     
+}
+#nav_header_item
+{
+    position:absolute;
+    left:34px;
+    top:-11px;
+    color:#ffffff;
+}
+.nav-link
+{
+    padding:0;
+}
+ 

@@ -1,0 +1,106 @@
+﻿<style>
+     
+        .my_navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+    .my_dropdown {
+        float: left; 
+        position:relative;
+    }
+
+        .my_dropdown .my_dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .my_navbar a:hover, .my_dropdown:hover .my_dropbtn {
+            background-color: red;
+        }
+
+    .my_dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-top: 43px;
+    }
+
+        .my_dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+            .my_dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+    .my_dropdown:hover .my_dropdown-content {
+        display: block;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <div class="row">
+                <div class="col-md-4"><h1>Phone</h1></div>
+                <div class="col-md-8">
+                    @using (@Html.BeginForm("Search", "Idenx", FormMethod.Post, new { @class = "form-group" }))
+                    {
+                        <div class="input-group" id="search">
+                            @Html.TextBox("name", null, new { @class = "form-control" })
+                            <i class="fas fa-search" id="search_item"></i>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-sm-12">
+            <div class="row justify-content-between">
+                <ul class="nav mt-2">
+                    <li id="nav_header"><i class="fas fa-home fa-2x" id="nav_header_item"></i><a class="nav-link active" style="color:#ffffff;font-size:15px" href="#">Trang Chủ</a></li>
+                    <li id="nav_header"><i class="fas fa-file fa-2x" id="nav_header_item"></i><a class="nav-link" style="color:#ffffff;font-size:15px" href="#">Giới Thiệu</a></li>
+                    
+                    <li class="my_navbar my_dropdown nav_header">
+                        <i class="fas fa-mobile-alt fa-2x" id="nav_header_item"></i>
+                        <a class="nav-link my_dropbtn" style="color:#ffffff;font-size:15px" href="#">Sản Phẩm <i class="fa fa-caret-down"></i></a>
+
+                        <div class="my_dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </li>
+                     
+                    <li id="nav_header"><i class="fas fa-pager fa-2x" id="nav_header_item"></i><a class="nav-link" style="color:#ffffff;font-size:15px" href="#">Tin Tức</a></li>
+                    <li id="nav_header"><i class="fas fa-chalkboard-teacher fa-2x" id="nav_header_item"></i><a class="nav-link" style="color:#ffffff;font-size:15px" href="#">Liên Hệ</a></li>
+                </ul>
+                <ul class="nav mt-2">
+                    <li id="nav_header"><i class="fas fa-sign-in-alt fa-2x" id="nav_header_item"></i><a class="nav-link" style="color:#ffffff;font-size:15px" href="#">Đăng Nhập</a></li>
+                    <li id="nav_header"><i class="fas fa-sign-out-alt fa-2x" id="nav_header_item"></i><a class="nav-link" style="color:#ffffff;font-size:15px" href="#">Đăng Xuất</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

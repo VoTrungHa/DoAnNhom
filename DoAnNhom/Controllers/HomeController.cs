@@ -4,13 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace DoAnNhom.Controllers.XemHang
+namespace DoAnNhom.Controllers
 {
-    public class XemSpController : Controller
+    public class HomeController : Controller
     {
         //
-        // GET: /XemSp/
+        // GET: /Home/
         public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult Index1()
         {
             return View();
         }
